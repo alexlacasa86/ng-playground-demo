@@ -1,0 +1,23 @@
+<md-sidenav-container>
+  <md-sidenav>
+    <!-- sidenav content -->
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <span>Angular playground demo</span>
+  </md-toolbar>
+
+  <main>
+    <md-card>
+      <md-card-content>
+        <app-input></app-input>
+        <app-output></app-output>
+
+        <hr>
+
+        <app-receiver [data]="categories | async"></app-receiver>
+      </md-card-content>
+    </md-card>
+  </main>
+
+</md-sidenav-container>
