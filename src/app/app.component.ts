@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { CommunicationService } from './services/communication.service';
 import { Component, OnInit } from '@angular/core';
@@ -7,18 +8,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  categories: Observable<any>;
+  constructor(private _router: Router) { }
 
-  constructor(public comm: CommunicationService) { }
-
-  ngOnInit() {
-    this.categories = this.comm.getCategories('Valencia');
-
-    setTimeout(() => {
-      this.categories = this.comm.getCategories('Teruel');
-    }, 5000);
-
+  goTo(dest: string) {
+    this._router.navigate([`/${dest}`]);
   }
 }

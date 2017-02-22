@@ -1,12 +1,15 @@
 md-sidenav-container {
   background: gainsboro;
+  height: 100vh;
 }
 
 md-card {
-  margin: 0 16px;
   background: white;
+  margin: 0 16px;
 }
 
-hr {
-  margin: 16px 0;
+.toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

@@ -1,26 +1,34 @@
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
+import { NoContentComponent } from './components/no-content/no-content.component';
 import { OutputComponent } from './components/output/output.component';
 import { ReceiverComponent } from './components/receiver/receiver.component';
+import { SenderComponent } from './components/sender/sender.component';
 import { CommunicationService } from './services/communication.service';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
+import { InputOutputComponent } from './components/input-output/input-output.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
     OutputComponent,
-    ReceiverComponent
+    SenderComponent,
+    ReceiverComponent,
+    NoContentComponent,
+    InputOutputComponent
 ],
   imports: [
-    BrowserModule,
-    FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    FormsModule,
+    BrowserModule,
+    MaterialModule,
+    AppRoutingModule
   ],
   providers: [
     CommunicationService

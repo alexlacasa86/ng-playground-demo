@@ -4,18 +4,19 @@
   </md-sidenav>
 
   <md-toolbar color="primary">
-    <span>Angular playground demo</span>
+    <div class="toolbar-content">
+      <span>Angular playground demo</span>
+      <div class="button-wrapper">
+        <button md-button (click)="goTo('io')">I/O</button>
+        <button md-button (click)="goTo('sr')">S/R</button>
+      </div>
+    </div>
   </md-toolbar>
 
   <main>
     <md-card>
       <md-card-content>
-        <app-input></app-input>
-        <app-output></app-output>
-
-        <hr>
-
-        <app-receiver [data]="categories | async"></app-receiver>
+        <router-outlet></router-outlet>
       </md-card-content>
     </md-card>
   </main>

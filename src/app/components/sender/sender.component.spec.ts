@@ -1,18 +1,16 @@
-import { HttpModule } from '@angular/http';
 import { CommunicationService } from '../../services/communication.service';
-import { OutputComponent } from './output.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-describe('OutputComponent', () => {
-  let component: OutputComponent;
-  let fixture: ComponentFixture<OutputComponent>;
+import { SenderComponent } from './sender.component';
+
+describe('SenderComponent', () => {
+  let component: SenderComponent;
+  let fixture: ComponentFixture<SenderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        OutputComponent
-      ], imports: [
-        HttpModule
+        SenderComponent
       ], providers: [
         CommunicationService
       ]
@@ -21,7 +19,7 @@ describe('OutputComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OutputComponent);
+    fixture = TestBed.createComponent(SenderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
