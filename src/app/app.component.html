@@ -1,24 +1,18 @@
 <md-sidenav-container>
   <md-sidenav>
-    <!-- sidenav content -->
+
   </md-sidenav>
 
   <md-toolbar color="primary">
     <div class="toolbar-content">
       <span>Angular playground demo</span>
       <div class="button-wrapper">
-        <button md-button (click)="goTo('io')">I/O</button>
-        <button md-button (click)="goTo('sr')">S/R</button>
+        <button mdButton (click)="goTo('io')">I/O</button>
+        <button mdButton (click)="goTo('sr')">S/R</button>
       </div>
     </div>
   </md-toolbar>
 
-  <main>
-    <md-card>
-      <md-card-content>
-        <router-outlet></router-outlet>
-      </md-card-content>
-    </md-card>
-  </main>
+  <app-routing></app-routing>
 
 </md-sidenav-container>

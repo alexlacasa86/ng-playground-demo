@@ -7,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
-
   value: string;
 
   constructor(public comm: CommunicationService) { }
 
   ngOnInit() {
     this.value = 'Default value';
-    this.comm.updateCommSubjects(this.value);
+    this.valueChanged(this.value);
   }
 
   valueChanged(str) {

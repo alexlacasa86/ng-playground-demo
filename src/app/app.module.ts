@@ -12,6 +12,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { InputOutputComponent } from './components/input-output/input-output.component';
+import { RoutingComponent } from './components/routing/routing.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InputOutputComponent } from './components/input-output/input-output.com
     SenderComponent,
     ReceiverComponent,
     NoContentComponent,
-    InputOutputComponent
+    InputOutputComponent,
+    RoutingComponent
 ],
   imports: [
     HttpModule,

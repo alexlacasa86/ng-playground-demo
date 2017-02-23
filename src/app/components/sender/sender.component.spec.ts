@@ -1,7 +1,8 @@
+import { HttpModule } from '@angular/http';
 import { CommunicationService } from '../../services/communication.service';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ReceiverComponent } from '../receiver/receiver.component';
 import { SenderComponent } from './sender.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 describe('SenderComponent', () => {
   let component: SenderComponent;
@@ -10,7 +11,10 @@ describe('SenderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        SenderComponent
+        SenderComponent,
+        ReceiverComponent
+      ], imports: [
+        HttpModule
       ], providers: [
         CommunicationService
       ]

@@ -1,13 +1,25 @@
+import { RouterTestingModule } from '@angular/router/testing';
+import { APP_BASE_HREF } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RoutingComponent } from './components/routing/routing.component';
 import { AppComponent } from './app.component';
-import { AppModule } from './app.module';
 import { async, TestBed } from '@angular/core/testing';
+import { MaterialModule } from '@angular/material';
 
 describe('AppComponent', () => {
+
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        AppModule
+      declarations: [
+        AppComponent
       ],
+      imports: [
+        RouterTestingModule
+      ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     });
     TestBed.compileComponents();
   });

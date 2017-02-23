@@ -1,6 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommunicationService } from '../../services/communication.service';
+import { MaterialModule } from '@angular/material';
+import { InputComponent } from '../input/input.component';
+import { OutputComponent } from '../output/output.component';
 import { InputOutputComponent } from './input-output.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 describe('InputOutputComponent', () => {
   let component: InputOutputComponent;
@@ -8,7 +12,16 @@ describe('InputOutputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputOutputComponent ]
+      declarations: [
+        InputComponent,
+        OutputComponent,
+        InputOutputComponent
+      ], imports: [
+        FormsModule,
+        MaterialModule
+      ], providers: [
+        CommunicationService
+      ]
     })
     .compileComponents();
   }));
